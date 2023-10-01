@@ -1,0 +1,3 @@
+C:/Files and Documents/Downloads/PolygonCube/OpenGLProjVS2022/cmake-build-debug/CMakeFiles/OpenGLProjVS2022.dir
+C:/Files and Documents/Downloads/PolygonCube/OpenGLProjVS2022/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Files and Documents/Downloads/PolygonCube/OpenGLProjVS2022/cmake-build-debug/CMakeFiles/rebuild_cache.dir

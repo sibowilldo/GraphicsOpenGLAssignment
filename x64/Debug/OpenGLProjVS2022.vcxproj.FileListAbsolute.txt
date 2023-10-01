@@ -1,0 +1,3 @@
+C:\Users\govda\Desktop\OpenGLProjVS2022\x64\Debug\OpenGLProjVS2022.exe
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\x64\Debug\PolygonCube.exe
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\x64\Debug\PolygonCube.exe
