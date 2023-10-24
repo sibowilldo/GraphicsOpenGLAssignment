@@ -2,6 +2,7 @@
 #include <WinUser.h>
 #include <cstdlib>
 #include <cstdio>
+#include <iostream>
 #include<cmath>
 #include<GL/gl.h>
 #include <GL/glu.h>
@@ -14,26 +15,23 @@ const int screenWidth = 1280, screenHeight = 720;
 GLboolean amb = true, spec = true, dif = true;
 
 
-bool l_on1 = true;
-bool l_on2 = true;
-bool l_on3 = false;
+bool light_dim = true;
+bool light_bright = true;
 
 
-//cube(1, 0.7, 0.4);  Skin tone
+double spt_cutoff = 800;
 
-double spt_cutoff = 400;
+float rot = 90;
 
-float rot = 0;
-
-GLfloat eyeX = 0;
+GLfloat eyeX = -14;
 GLfloat eyeY = 10;
-GLfloat eyeZ = 10;
+GLfloat eyeZ = 0;
 
-GLfloat lookX = 0;
+GLfloat lookX = 30;
 GLfloat lookY = 10;
-GLfloat lookZ = 2;
+GLfloat lookZ = 0;
 
-static GLfloat baseVertexCube[8][3] =
+static GLfloat matrixCube[8][3] =
 {
     {0,0,0},
     {0,0,1},
@@ -72,27 +70,27 @@ static void setGLNormal3f
 void cube(GLfloat red, GLfloat green, GLfloat blue)
 {
     GLfloat 
-        ambience[] = { red * 0.3,green * 0.3,blue * 0.3,1 },
-        lightDiffuse[] = { red, green, blue, 1 },
-        specular[] = { 1, 1, 1, 1 }, 
+        ambienceLighting[] = { red * 0.2,green * 0.2,blue * 0.2,0 },
+        diffuseLighting[] = { red, green, blue, 1 },
+        specularLighting[] = { 1, 1, 1, 1 }, 
         shininess[] = { 10 };
 
-    glMaterialfv(GL_FRONT, GL_AMBIENT, ambience);
-    glMaterialfv(GL_FRONT, GL_DIFFUSE, lightDiffuse);
-    glMaterialfv(GL_FRONT, GL_SPECULAR, specular);
+    glMaterialfv(GL_FRONT, GL_AMBIENT, ambienceLighting);
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, diffuseLighting);
+    glMaterialfv(GL_FRONT, GL_SPECULAR, specularLighting);
     glMaterialfv(GL_FRONT, GL_SHININESS, shininess);
 
     glBegin(GL_QUADS);
     for (GLint i = 0; i < 6; i++)
     {
         setGLNormal3f(
-            baseVertexCube[quadIndices[i][0]][0], baseVertexCube[quadIndices[i][0]][1], baseVertexCube[quadIndices[i][0]][2],
-            baseVertexCube[quadIndices[i][1]][0], baseVertexCube[quadIndices[i][1]][1], baseVertexCube[quadIndices[i][1]][2],
-            baseVertexCube[quadIndices[i][2]][0], baseVertexCube[quadIndices[i][2]][1], baseVertexCube[quadIndices[i][2]][2]);
+            matrixCube[quadIndices[i][0]][0], matrixCube[quadIndices[i][0]][1], matrixCube[quadIndices[i][0]][2],
+            matrixCube[quadIndices[i][1]][0], matrixCube[quadIndices[i][1]][1], matrixCube[quadIndices[i][1]][2],
+            matrixCube[quadIndices[i][2]][0], matrixCube[quadIndices[i][2]][1], matrixCube[quadIndices[i][2]][2]);
 
         for (GLint j = 0; j < 4; j++)
         {
-            glVertex3fv(&baseVertexCube[quadIndices[i][j]][0]);
+            glVertex3fv(&matrixCube[quadIndices[i][j]][0]);
         }
     }
     glEnd();
@@ -124,12 +122,8 @@ void desk()
     glTranslatef(0, 7.3, 0);
     cube(1, 1, 1);
     glPopMatrix();
-
-
-
-
-
 }
+
 void chair()
 {
     float length = .4;
@@ -205,6 +199,11 @@ void deskChairGrouping()
     chair();
     glPopMatrix();
 
+    glPushMatrix();
+    glTranslatef(3.5f, 0, 0);
+    chair();
+    glPopMatrix();
+
 }
 
 
@@ -217,8 +216,8 @@ void renderDeskChairGroupSet()
     glPopMatrix();
     
     glPushMatrix();
-    glTranslatef(-4, 0, -2);
-    glRotatef(-90,0,1,0);
+    glTranslatef(-8, 0, 4);
+    glRotatef(-270,0,1,0);
     deskChairGrouping();
     glPopMatrix();
 
@@ -231,22 +230,20 @@ void renderDeskChairGroupSet()
 
 
     glPushMatrix();
-    glTranslatef(-4, 0, -10);
-    glRotatef(-90,0,1,0);
+    glTranslatef(-8, 0, -4);
+    glRotatef(-270,0,1,0);
     deskChairGrouping();
     glPopMatrix();
 }
 
 
-void fan_face()
+void chopper_blade_base()
 {
     glPushMatrix();
     glScalef(2, .5, 1.8);
     glTranslatef(-0.4, 19, -.4);
-    cube(1.000, 1.000, 1.000);
+    cube(0.3, 0.3, 0.32);
     glPopMatrix();
-
-
 }
 
 void stand()
@@ -254,135 +251,110 @@ void stand()
     glPushMatrix();
     glScalef(.5, 5, .5);
     glTranslatef(0, 2, 0);
-    cube(0.392, 0.584, 0.929);
+    cube(0.092, 0.092, 0.092);
     glPopMatrix();
 }
 
-void leg()
+void chopper_blade()
 {
     glPushMatrix();
     glScalef(5, 0.07, 1.8);
     glTranslatef(0, 140, -0.3);
-    cube(0.392, 0.584, 0.929);
+    cube(0.092, 0.092, 0.092);
     glPopMatrix();
 }
 
 
-void fan_set()
+void chopper_blades()
 {
     glPushMatrix();
     glPushMatrix();
-    fan_face();
+    chopper_blade_base();
     glPopMatrix();
 
-
-
     glPushMatrix();
-    leg();
+    chopper_blade();
     glPopMatrix();
 
     glPushMatrix();
 
     glTranslatef(-5, 0.0, 0);
-    leg();
+    chopper_blade();
     glPopMatrix();
-
 
     glPushMatrix();
     glRotatef(90, 0, 1, 0);
     glTranslatef(-6, 0, 0);
-    leg();
+    chopper_blade();
     glPopMatrix();
 
     glPushMatrix();
     glRotatef(90, 0, 1, 0);
     glTranslatef(0, 0, 0);
-    leg();
+    chopper_blade();
     glPopMatrix();
 }
 
-void fan()
+void chopper_blade_set()
 {
-
-
     glPushMatrix();
     glRotatef(alpha, 0, .1, 0);
-    fan_set();
+    chopper_blades();
     glPopMatrix();
 
     glPushMatrix();
     stand();
     glPopMatrix();
-
 }
-void fan_full_set()
+
+
+void chopper_body()
 {
     glPushMatrix();
-    glTranslatef(7, 0, 0);
-    fan();
+    glScalef(.45, .45, .8);
+    glTranslatef(-.4, 0, -.8);
+    cube(0.4506, 0.5055, 0.3996); // blue
+    glTranslatef(0, 0,-.3);
+    cube(0.4706, 0.5255, 0.4196); // blue
     glPopMatrix();
 
     glPushMatrix();
-    glTranslatef(-7, 0, 0);
-    fan();
+    glScalef(.2, .2, 1);
+    glTranslatef(-0.3, 0.3, 0);
+    cube(0.4706, 0.5255, 0.4196); // Green
     glPopMatrix();
 
     glPushMatrix();
-    glTranslatef(7, 0, -9);
-    fan();
+    glScalef(.6, .6, .6);
+    glTranslatef(-.4, 0, -1);
+    cube(0.4706, 0.5255, 0.4196); //Red
     glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(-7, 0, -9);
-    fan();
-    glPopMatrix();
-
-
 }
-void almari()
+
+void chopper()
 {
     glPushMatrix();
-
-    GLfloat almari_height = 12, almari_width = 6, almari_length = 3;
-
-
-    glPushMatrix();
-    glScalef(almari_width, almari_height, almari_length);
-    glTranslatef(1, 0, 3.5);
-    cube(1, 0.6, 0.2);
+    glScalef(.05, .1, .1);
+    glRotatef(90, 0, 0, 1);
+    glTranslatef(32, 105, 23);
+    chopper_blade_set();
+    glScalef(2, 2, 1.5);
+    glRotatef(90, 0, 0, 1);
+    glTranslatef(7, -13, -8);
+    chopper_blade_set();
     glPopMatrix();
 
     glPushMatrix();
-    glTranslatef(0.4, 0, 4.1);
-    glScalef(almari_width / 45, (almari_height - .5), almari_length / 5.5);
-    glTranslatef(65, 0, 11.5);
-    cube(1.000, 0.000, 1.000);
+    glTranslatef(-6,3,1.5);
+    chopper_body();
     glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(1.5, 5, 4.5);
-    glScalef(almari_width / 25, almari_height / 10, almari_length / 5.5);
-    glTranslatef(28, 0, 10);
-    cube(0, 0, 0);
-    glPopMatrix();
-
-    glPushMatrix();
-    glTranslatef(-0.6, 5, 4.5);
-    glScalef(almari_width / 25, almari_height / 10, almari_length / 5.5);
-    glTranslatef(44, 0, 10);
-    cube(0, 0, 0);
-    glPopMatrix();
-
-    glPopMatrix();
-
-
 }
 
 void board()
 {
     glPushMatrix();
     glScalef(10, 8, 0.1);
-    glTranslatef(-1.2, .45, 130);
+    glTranslatef(-.6, .45, 130);
     cube(0, 0, 0);
     glPopMatrix();
 }
@@ -462,7 +434,6 @@ void window()
     glTranslatef(-139, .5, 0);
     cube(0, 0, 0);
     glPopMatrix();
-
 }
 
 void windows()
@@ -478,42 +449,6 @@ void windows()
     glPopMatrix();
 }
 
-void projector()
-{
-    glPushMatrix();
-    glScalef(2, .7, 1.8);
-    glTranslatef(-0.43, 15, -.4);
-    cube(1, 0, 0);
-    glPopMatrix();
-
-    glPushMatrix();
-    glScalef(.5, 3.4, .5);
-    glTranslatef(0, 3.2, 0);
-    cube(0.392, 0.3, 0.929);
-    glPopMatrix();
-
-    glPushMatrix();
-    glScalef(.68, .68, .68);
-    glTranslatef(0, 15.45, 1);
-    cube(1, 0, 1);
-    glPopMatrix();
-
-    glPushMatrix();
-    glScalef(.60, .60, .60);
-    glTranslatef(0.05, 17.55, 1.4);
-    cube(0, 0, 0);
-    glPopMatrix();
-}
-
-void projector_board()
-{
-    glPushMatrix();
-    glScalef(6, 6, 0.1);
-    glTranslatef(-0.2, .8, 130);
-    cube(1, 1, 1);
-    glPopMatrix();
-
-}
 void AC()
 {
     glPushMatrix();
@@ -631,7 +566,7 @@ void mainDoors()
 
 }
 
-void floorWallsCeiling(float scale)
+void Room(float scale)
 {
     // Floor
     glPushMatrix();
@@ -684,8 +619,6 @@ void floorWallsCeiling(float scale)
 
 void light()
 {
-
-
     GLfloat l_amb[] = { 0.2, 0.2, 0.2, 1.0 };
     GLfloat l_dif[] = { 0.961, 0.871, 0.702 };
     GLfloat l_spec[] = { 0.2,0.2,0.2,1 };
@@ -694,13 +627,11 @@ void light()
     GLfloat l_pos2[] = { 44,30,-5,1.0 };
     GLfloat l_pos3[] = { 0,60,0,1.0 };
 
-
-
     glEnable(GL_LIGHT0);
     glEnable(GL_LIGHT1);
     glEnable(GL_LIGHT2);
 
-    if (l_on1)
+    if (light_dim)
     {
         if (amb == true)
         {
@@ -738,12 +669,7 @@ void light()
     glLightfv(GL_LIGHT0, GL_POSITION, l_pos1);
 
 
-
-
-
-
-
-    if (l_on2)
+    if (light_bright)
     {
         if (amb == true)
         {
@@ -781,43 +707,6 @@ void light()
     glLightfv(GL_LIGHT1, GL_POSITION, l_pos2);
 
 
-
-    if (l_on3)
-    {
-        if (amb == true)
-        {
-            glLightfv(GL_LIGHT2, GL_AMBIENT, l_amb);
-        }
-        else
-        {
-            glLightfv(GL_LIGHT2, GL_AMBIENT, l_no);
-        }
-
-        if (dif == true)
-        {
-            glLightfv(GL_LIGHT2, GL_DIFFUSE, l_dif);
-        }
-        else
-        {
-            glLightfv(GL_LIGHT2, GL_DIFFUSE, l_no);
-        }
-        if (spec == true)
-        {
-            glLightfv(GL_LIGHT2, GL_SPECULAR, l_spec);
-        }
-        else
-        {
-            glLightfv(GL_LIGHT2, GL_SPECULAR, l_no);
-        }
-
-    }
-    else
-    {
-        glLightfv(GL_LIGHT2, GL_AMBIENT, l_no);
-        glLightfv(GL_LIGHT2, GL_DIFFUSE, l_no);
-        glLightfv(GL_LIGHT2, GL_SPECULAR, l_no);
-    }
-
     glLightfv(GL_LIGHT2, GL_POSITION, l_pos3);
 
     GLfloat spot_direction[] = { 0.0, -1.0, 0.0 };
@@ -840,15 +729,12 @@ void display(void)
 
     glRotatef(rot, 0, 1, 0);
     light();
-    //fan_full_set();
+    chopper();
     renderDeskChairGroupSet();
-    floorWallsCeiling(30);
+    Room(30);
     windows();
     board();
-    //almari();
-    //projector();
     aircons();
-    //projector_board();
     ceilingLightSet();
     mainDoors();
     glFlush();
@@ -860,24 +746,23 @@ void myKeyboardFunc(unsigned char key, int x, int y)
     switch (key)
     {
 
-    case 'd':
-        rot++;
+    case '.':
+        rot++; 
         break;
 
-    case 'a':
+    case ',':
         rot--;
         break;
 
-    case 'w':
+    case 'a':
         eyeY++;
         break;
 
-    case 's':
+    case 'z':
         eyeY--;
         break;
 
     case '+':
-        eyeX = 0;
         eyeZ++; 
         lookZ++;
         break;
@@ -887,26 +772,21 @@ void myKeyboardFunc(unsigned char key, int x, int y)
         break;
 
     case '1':
-        l_on1 = !l_on1;
+        light_dim = !light_dim;
         break;
     case '2':
-        l_on2 = !l_on2;
-        break;
-    case '3':
-        l_on3 = !l_on3;
+        light_bright = !light_bright;
         break;
 
-    case '4':
+    case '3':
         amb = ~amb;
         break;
-    case '5':
+    case '4':
         spec = ~spec;
         break;
-    case '6':
+    case '5':
         dif = ~dif;
         break;
-
-
     }
 }
 
