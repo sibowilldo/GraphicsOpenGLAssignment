@@ -32,3 +32,4 @@
 *.app
 # Package files
 packages/*
+.vs/*
