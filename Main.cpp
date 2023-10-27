@@ -2,7 +2,6 @@
 #include <WinUser.h>
 #include <cstdlib>
 #include <cstdio>
-#include <iostream>
 #include<cmath>
 #include<GL/gl.h>
 #include <GL/glu.h>
@@ -10,7 +9,7 @@
 #include <string>
 
 GLfloat alpha = 0.0, theta = 0.0, axis_x = 0.0, axis_y = 0.0, Calpha = 360.0, C_hr_alpha = 360.0;
-GLboolean bRotate = false, fRotate = true, cRotate = true, xz_rotate = false, l_on = true;
+GLboolean bRotate = true, fRotate = true, cRotate = true, xz_rotate = false, l_on = true;
 const int screenWidth = 1280, screenHeight = 720;
 GLboolean amb = true, spec = true, dif = true;
 
@@ -20,12 +19,12 @@ bool light_bright = true;
 
 
 double spt_cutoff = 800;
+double sensitivity = 0.01;
+float rotation = 90;
 
-float rot = 90;
-
-GLfloat eyeX = -14;
-GLfloat eyeY = 10;
-GLfloat eyeZ = 0;
+GLfloat cameraX = -14;
+GLfloat cameraY = 10;
+GLfloat cameraZ = 0;
 
 GLfloat lookX = 30;
 GLfloat lookY = 10;
@@ -33,26 +32,16 @@ GLfloat lookZ = 0;
 
 static GLfloat matrixCube[8][3] =
 {
-    {0,0,0},
-    {0,0,1},
-    {0,1,0},
-    {0,1,1},
-
-    {1,0,0},
-    {1,0,1},
-    {1,1,0},
-    {1,1,1}
+    {0,0,0},{0,0,1}, {0,1,0}, {0,1,1},
+    {1,0,0},{1,0,1}, {1,1,0}, {1,1,1}
 };
 
 
 static GLubyte quadIndices[6][4] =
 {
-   {0,2,6,4},
-    {1,5,7,3},
-    {0,4,5,1},
-    {2,3,7,6},
-    {0,1,3,2},
-    {4,6,7,5}
+    {0,2,6,4}, {1,5,7,3},
+    {0,4,5,1}, {2,3,7,6},
+    {0,1,3,2}, {4,6,7,5}
 };
 
 
@@ -70,15 +59,17 @@ static void setGLNormal3f
 void cube(GLfloat red, GLfloat green, GLfloat blue)
 {
     GLfloat 
-        ambienceLighting[] = { red * 0.2,green * 0.2,blue * 0.2,0 },
+        ambienceLighting[] = { red * 0.2,green * 0.2,blue * 0.2, 1 },
         diffuseLighting[] = { red, green, blue, 1 },
         specularLighting[] = { 1, 1, 1, 1 }, 
+        positionLighting[] = { 10, 100, 10, 0.1 }, 
         shininess[] = { 10 };
 
     glMaterialfv(GL_FRONT, GL_AMBIENT, ambienceLighting);
     glMaterialfv(GL_FRONT, GL_DIFFUSE, diffuseLighting);
-    glMaterialfv(GL_FRONT, GL_SPECULAR, specularLighting);
-    glMaterialfv(GL_FRONT, GL_SHININESS, shininess);
+    glLightfv(GL_FRONT, GL_POSITION, specularLighting);
+    glLightfv(GL_FRONT, GL_SPOT_DIRECTION, positionLighting);
+    glLightfv(GL_FRONT, GL_SHININESS, shininess);
 
     glBegin(GL_QUADS);
     for (GLint i = 0; i < 6; i++)
@@ -99,9 +90,9 @@ void cube(GLfloat red, GLfloat green, GLfloat blue)
 
 void desk()
 {
+    float width = .5;
     float length = .5;
     float height = 3;
-    float width = .5;
 
     // Leg
     glPushMatrix();
@@ -132,9 +123,8 @@ void chair()
 
 
     glPushMatrix(); // Chair Leg Y 1
-    glTranslatef(length / 2, 0, 0);
+    glTranslatef(length, 0.0, -0.42);
     glScalef(length / 1.8, height, width / 3);
-    glTranslatef(1, 0, -3.4);
     cube(.6, .6, .6);
     glPopMatrix();
 
@@ -295,10 +285,10 @@ void chopper_blades()
     glPopMatrix();
 }
 
-void chopper_blade_set()
+void chopper_blade_set(GLfloat speed)
 {
     glPushMatrix();
-    glRotatef(alpha, 0, .1, 0);
+    glRotatef(alpha*speed, 0, .1, 0);
     chopper_blades();
     glPopMatrix();
 
@@ -331,22 +321,34 @@ void chopper_body()
     glPopMatrix();
 }
 
-void chopper()
+void chopper(GLfloat sBladeSpeed = 1, GLfloat lBladeSpeed = 1)
 {
     glPushMatrix();
     glScalef(.05, .1, .1);
     glRotatef(90, 0, 0, 1);
     glTranslatef(32, 105, 23);
-    chopper_blade_set();
+    chopper_blade_set(sBladeSpeed);
     glScalef(2, 2, 1.5);
     glRotatef(90, 0, 0, 1);
     glTranslatef(7, -13, -8);
-    chopper_blade_set();
+    chopper_blade_set(lBladeSpeed);
     glPopMatrix();
 
     glPushMatrix();
     glTranslatef(-6,3,1.5);
     chopper_body();
+    glPopMatrix();
+}
+
+void renderChopper() {
+
+    glPushMatrix();
+    chopper(10.5, .5);
+
+    glRotatef(180, 0, 10, 0);
+    glScalef(1.2, 1.2, 1);
+    glTranslatef(1.5,-.5,-1.5);
+    chopper(.2, 0);
     glPopMatrix();
 }
 
@@ -724,12 +726,12 @@ void display(void)
 
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
-    gluLookAt(eyeX, eyeY, eyeZ, lookX, lookY, lookZ, 0, 1, 0);
+    gluLookAt(cameraX, cameraY, cameraZ, lookX, lookY, lookZ, 0, 1, 0);
 
 
-    glRotatef(rot, 0, 1, 0);
+    glRotatef(rotation, 0, 1, 0);
     light();
-    chopper();
+    renderChopper();
     renderDeskChairGroupSet();
     Room(30);
     windows();
@@ -741,34 +743,34 @@ void display(void)
     glutSwapBuffers();
 }
 
-void myKeyboardFunc(unsigned char key, int x, int y)
+void mapKeyboardInputs(unsigned char key, int x, int y)
 {
     switch (key)
     {
-
+    // Camera Angle and Distance
     case '.':
-        rot++; 
+        rotation++; 
         break;
 
     case ',':
-        rot--;
+        rotation--;
         break;
 
     case 'a':
-        eyeY++;
+        cameraY++;
         break;
 
     case 'z':
-        eyeY--;
+        cameraY--;
         break;
 
     case '+':
-        eyeZ++; 
+        cameraZ++; 
         lookZ++;
         break;
-
+    // Lighting
     case '-':
-        eyeZ--;
+        cameraZ--;
         break;
 
     case '1':
@@ -788,6 +790,16 @@ void myKeyboardFunc(unsigned char key, int x, int y)
         dif = ~dif;
         break;
     }
+}
+
+void mapMouseMovements(int x, int y) {
+    static int lastX = 0, lastY = 0;
+    int deltaX = x - lastX;
+    int deltaY = y - lastY;
+    lastX = x;
+    lastY = y;
+    cameraX += deltaX * sensitivity;
+    cameraY += deltaY * sensitivity;
 }
 
 
@@ -811,8 +823,6 @@ void animate()
     glutPostRedisplay();
 }
 
-
-
 int main(int argc, char** argv)
 {
     glutInit(&argc, argv);
@@ -824,13 +834,16 @@ int main(int argc, char** argv)
 
     glShadeModel(GL_SMOOTH);
     glEnable(GL_DEPTH_TEST);
+    glEnable(GL_LIGHTING);
     glEnable(GL_NORMALIZE);
 
-    glEnable(GL_LIGHTING);
+    glutKeyboardFunc(mapKeyboardInputs);
+    glutPassiveMotionFunc(mapMouseMovements);
 
-    glutKeyboardFunc(myKeyboardFunc);
     glutDisplayFunc(display);
     glutIdleFunc(animate);
+
+    glLoadIdentity();
 
     glutMainLoop(); 
 
