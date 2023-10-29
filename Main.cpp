@@ -915,7 +915,7 @@ int main(int argc, char** argv)
     glEnable(GL_NORMALIZE);
 
     glutKeyboardFunc(mapKeyboardInputs);
-    //glutPassiveMotionFunc(mapMouseMovements);
+    glutPassiveMotionFunc(mapMouseMovements);
 
     glutDisplayFunc(display);
     glutIdleFunc(animate);
