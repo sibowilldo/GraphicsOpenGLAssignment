@@ -476,9 +476,86 @@ void ceilingLight()
     glPushMatrix();
     glScalef(1, .05, 1);
     glTranslatef(0, 115.55, 0);
-    cube(1, 1, 1);
+    cube(253/255, 249/255, 253/255);
     glPopMatrix();
 }
+
+void studentHead() {
+
+    glPushMatrix(); // head
+    glScalef(1, 1.5, 1);
+    glTranslatef(0, 2.7, 0.2);
+    cube(.5, .3, .2);
+    glPopMatrix();
+}
+
+void studentTorso(GLfloat colorRed =.6, GLfloat colorGreen =.6,GLfloat colorBlue = 1) {
+    glPushMatrix(); // Torso
+    glScalef(1.2, 2, .5);
+    glTranslatef(-0.1, 1, 1);
+    cube(colorRed, colorGreen, colorBlue);
+    glPopMatrix();
+}
+
+
+void studentLeg(GLfloat legHeight = 1) {
+
+    glPushMatrix(); // Leg
+    glScalef(.5, legHeight, .5);
+    glTranslatef(1, 0, 1);
+    cube(1, 1, 1);
+    glPopMatrix();
+
+}
+
+
+void studentSet(GLfloat torsoColorRed = .6, GLfloat torsoColorGreen = .6, GLfloat torsoColorBlue = 1) {
+
+    GLint legHeight = 2;
+
+    glPushMatrix();
+    glTranslatef(0, 0, 0);
+    studentLeg(legHeight);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(-.55,  0, 0);
+    studentLeg(legHeight);
+    glPopMatrix();
+
+    glPushMatrix(); // arms
+    glScalef(.5, legHeight, .5);
+    glTranslatef(-1.3, (legHeight / 2)-.1, 1);
+    cube(.5, .3, .2);
+    glScalef(1, 1, 1);
+    glTranslatef(3.5, (legHeight / 3), 0);
+    cube(.5, .3, .2);
+    glPopMatrix();
+
+    glPushMatrix();
+    studentTorso(torsoColorRed,torsoColorGreen,torsoColorBlue);
+    glPopMatrix();
+
+    glPushMatrix();
+    studentHead();
+    glPopMatrix();
+}
+
+void renderStudent() {
+    glPushMatrix();
+    glTranslatef(2.2, 0, 0);
+    glRotatef(90, 0, 1, 0);
+    studentSet();
+    glPopMatrix();
+
+
+    glPushMatrix();
+    glTranslatef(-2.2, 0, 0);
+    glRotatef(-90, 0, 1, 0);
+    studentSet(1,.6,.6);
+    glPopMatrix();
+}
+
 void ceilingLightSet()
 {
     glPushMatrix();
@@ -530,6 +607,7 @@ void ceilingLightSet()
     glPopMatrix();
 
 }
+
 void mainDoors()
 {
     glPushMatrix(); // Exit Sign
@@ -617,7 +695,6 @@ void Room(float scale)
     cube(1,1,1);
     glPopMatrix();
 }
-
 
 void light()
 {
@@ -739,6 +816,7 @@ void display(void)
     aircons();
     ceilingLightSet();
     mainDoors();
+    renderStudent();
     glFlush();
     glutSwapBuffers();
 }
@@ -802,7 +880,6 @@ void mapMouseMovements(int x, int y) {
     cameraY += deltaY * sensitivity;
 }
 
-
 void animate()
 {
     if (bRotate == true)
@@ -838,7 +915,7 @@ int main(int argc, char** argv)
     glEnable(GL_NORMALIZE);
 
     glutKeyboardFunc(mapKeyboardInputs);
-    glutPassiveMotionFunc(mapMouseMovements);
+    //glutPassiveMotionFunc(mapMouseMovements);
 
     glutDisplayFunc(display);
     glutIdleFunc(animate);

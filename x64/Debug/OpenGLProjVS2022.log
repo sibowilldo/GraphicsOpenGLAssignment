@@ -137,73 +137,94 @@ C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssi
 C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(458,10): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
 C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(477,17): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
 C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(478,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(486,23): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(492,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(498,23): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(504,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(510,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(516,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(522,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(528,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(536,24): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(536,19): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(536,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(543,23): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(543,17): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(550,23): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(550,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(552,20): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(552,15): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(552,10): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(557,24): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(557,19): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(557,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(559,16): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(559,13): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(559,10): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(564,23): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(564,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(565,19): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(566,20): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(566,15): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(566,10): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(577,20): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(577,15): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(577,10): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(585,18): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(585,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(585,10): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(593,18): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(593,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(593,10): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(601,18): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(601,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(601,10): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(609,24): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(609,17): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(624,25): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(624,30): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(624,35): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(625,25): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(625,32): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(625,39): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(626,26): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(626,30): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(626,34): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(638,20): warning C4805: '==': unsafe mix of type 'GLboolean' and type 'bool' in operation
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(647,20): warning C4805: '==': unsafe mix of type 'GLboolean' and type 'bool' in operation
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(655,21): warning C4805: '==': unsafe mix of type 'GLboolean' and type 'bool' in operation
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(676,20): warning C4805: '==': unsafe mix of type 'GLboolean' and type 'bool' in operation
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(685,20): warning C4805: '==': unsafe mix of type 'GLboolean' and type 'bool' in operation
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(693,21): warning C4805: '==': unsafe mix of type 'GLboolean' and type 'bool' in operation
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(716,26): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(716,26): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(801,23): warning C4244: '+=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(802,23): warning C4244: '+=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(808,20): warning C4805: '==': unsafe mix of type 'GLboolean' and type 'bool' in operation
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(810,21): warning C4305: '+=': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(812,28): warning C4244: '-=': conversion from 'double' to 'GLfloat', possible loss of data
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(816,20): warning C4805: '==': unsafe mix of type 'GLboolean' and type 'bool' in operation
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(818,21): warning C4305: '+=': truncation from 'double' to 'GLfloat'
-C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(820,28): warning C4244: '-=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(487,26): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(487,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(488,18): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(488,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(494,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(495,19): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(518,16): warning C4244: 'argument': conversion from 'GLint' to 'GLfloat', possible loss of data
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(522,19): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(523,16): warning C4244: 'argument': conversion from 'GLint' to 'GLfloat', possible loss of data
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(527,18): warning C4244: 'argument': conversion from 'GLint' to 'GLfloat', possible loss of data
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(528,39): warning C4244: 'argument': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(528,19): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(529,18): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(529,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(531,34): warning C4244: 'argument': conversion from 'int' to 'GLfloat', possible loss of data
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(532,18): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(532,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(546,18): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(553,19): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(555,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(555,18): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(563,23): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(569,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(575,23): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(581,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(587,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(593,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(599,22): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(605,21): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(614,24): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(614,19): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(614,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(621,23): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(621,17): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(628,23): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(628,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(630,20): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(630,15): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(630,10): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(635,24): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(635,19): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(635,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(637,16): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(637,13): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(637,10): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(642,23): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(642,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(643,19): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(644,20): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(644,15): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(644,10): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(655,20): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(655,15): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(655,10): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(663,18): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(663,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(663,10): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(671,18): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(671,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(671,10): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(679,18): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(679,14): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(679,10): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(687,24): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(687,17): warning C4305: 'argument': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(701,25): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(701,30): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(701,35): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(702,25): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(702,32): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(702,39): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(703,26): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(703,30): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(703,34): warning C4305: 'initializing': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(715,20): warning C4805: '==': unsafe mix of type 'GLboolean' and type 'bool' in operation
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(724,20): warning C4805: '==': unsafe mix of type 'GLboolean' and type 'bool' in operation
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(732,21): warning C4805: '==': unsafe mix of type 'GLboolean' and type 'bool' in operation
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(753,20): warning C4805: '==': unsafe mix of type 'GLboolean' and type 'bool' in operation
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(762,20): warning C4805: '==': unsafe mix of type 'GLboolean' and type 'bool' in operation
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(770,21): warning C4805: '==': unsafe mix of type 'GLboolean' and type 'bool' in operation
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(793,26): warning C4838: conversion from 'double' to 'GLfloat' requires a narrowing conversion
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(793,26): warning C4244: 'initializing': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(879,23): warning C4244: '+=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(880,23): warning C4244: '+=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(885,20): warning C4805: '==': unsafe mix of type 'GLboolean' and type 'bool' in operation
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(887,21): warning C4305: '+=': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(889,28): warning C4244: '-=': conversion from 'double' to 'GLfloat', possible loss of data
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(893,20): warning C4805: '==': unsafe mix of type 'GLboolean' and type 'bool' in operation
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(895,21): warning C4305: '+=': truncation from 'double' to 'GLfloat'
+C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\Main.cpp(897,28): warning C4244: '-=': conversion from 'double' to 'GLfloat', possible loss of data
   OpenGLProjVS2022.vcxproj -> C:\Files and Documents\Downloads\PolygonCube\OpenGLProjVS2022\GraphicsOpenGLAssignment\x64\Debug\PolygonCube.exe
